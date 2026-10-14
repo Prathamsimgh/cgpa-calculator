@@ -1,0 +1,5 @@
+# ads.txt — placeholder. Replace pub-0000000000000000 with your real
+# AdSense publisher ID after your account is approved.
+# Find it in AdSense > Account > Account information ("pub-...").
+# Keep this file at the domain root: https://pratham.cv/ads.txt
+google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
