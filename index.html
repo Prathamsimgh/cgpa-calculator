@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CGPA to Percentage Calculator — University-wise (VTU, Anna, AKTU, GTU, Mumbai, CBSE)</title>
+<meta name="description" content="Free CGPA to percentage calculator with university-specific formulas — VTU, Anna University, AKTU, GTU, Mumbai University and CBSE. Instant, client-side, no signup.">
+<link rel="canonical" href="https://pratham.cv/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d4ed8'/%3E%3Ctext x='32' y='45' font-size='36' text-anchor='middle' fill='white' font-family='system-ui' font-weight='bold'%3E%25%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="CGPA to Percentage Calculator">
+<meta property="og:title" content="CGPA to Percentage Calculator — University-wise (VTU, Anna, AKTU, GTU, Mumbai, CBSE)">
+<meta property="og:description" content="Convert CGPA to percentage with your university's exact formula. VTU, Anna University, AKTU, GTU, Mumbai University, CBSE. Free, instant, no signup.">
+<meta property="og:url" content="https://pratham.cv/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CGPA to Percentage Calculator — University-wise">
+<meta name="twitter:description" content="Convert CGPA to percentage with your university's exact formula. Free, instant, no signup.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "CGPA to Percentage Calculator",
+      "url": "https://pratham.cv/",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "INR" },
+      "description": "Free online CGPA to percentage calculator with university-specific formulas for VTU, Anna University, AKTU, GTU, Mumbai University, CBSE and more. Includes reverse percentage-to-CGPA and SGPA-to-CGPA converters. Runs entirely in the browser."
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "What is the formula to convert CGPA to percentage?", "acceptedAnswer": { "@type": "Answer", "text": "There is no single formula — it depends on your university. Common ones are CGPA × 9.5 (CBSE), CGPA × 10 (Anna University and many others), (CGPA − 0.75) × 10 (VTU, AKTU), (CGPA − 0.5) × 10 (GTU), and (7.1 × CGPA) + 11 (Mumbai University)." } },
+        { "@type": "Question", "name": "Is CGPA × 9.5 correct for my university?", "acceptedAnswer": { "@type": "Answer", "text": "Only if your university says so. The 9.5 multiplier is the CBSE formula; applying it to a VTU or AKTU CGPA gives a wrong, usually inflated, percentage." } },
+        { "@type": "Question", "name": "Why do different calculators show different percentages for the same CGPA?", "acceptedAnswer": { "@type": "Answer", "text": "Because they apply different universities' formulas — or a generic one. A calculator is only as correct as the formula it assumes." } },
+        { "@type": "Question", "name": "Which formula does VTU use?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on your scheme: 2015/2017/2018 schemes use (CGPA − 0.75) × 10 per regulation 18OB §7.1, while several sources report the 2021 scheme onwards uses CGPA × 10." } },
+        { "@type": "Question", "name": "How do I convert percentage back to CGPA?", "acceptedAnswer": { "@type": "Answer", "text": "Invert your university's formula — for (CGPA − 0.75) × 10, the reverse is (Percentage ÷ 10) + 0.75." } },
+        { "@type": "Question", "name": "What is the difference between SGPA and CGPA?", "acceptedAnswer": { "@type": "Answer", "text": "SGPA measures one semester; CGPA cumulates your whole degree with each semester weighted by its credits." } },
+        { "@type": "Question", "name": "Do companies ask for CGPA or percentage?", "acceptedAnswer": { "@type": "Answer", "text": "Most Indian recruiters ask for percentage on application forms. Convert with your official formula and keep it consistent everywhere." } },
+        { "@type": "Question", "name": "What CGPA is 75%?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the formula: 7.5 under plain ×10, 8.25 under VTU's (CGPA − 0.75) × 10, and 8.0 under GTU's (CGPA − 0.5) × 10." } },
+        { "@type": "Question", "name": "Is this calculator official?", "acceptedAnswer": { "@type": "Answer", "text": "No — it implements widely published formulas for quick computation, but your university's circular or marksheet is the authority." } },
+        { "@type": "Question", "name": "What if my university isn't listed?", "acceptedAnswer": { "@type": "Answer", "text": "Use Custom formula mode: map your circular's formula onto the multiplier and offset boxes — e.g. (CGPA − 0.75) × 10 means multiplier 10, offset 0.75." } },
+        { "@type": "Question", "name": "Does rounding matter — is 77.5% the same as 78%?", "acceptedAnswer": { "@type": "Answer", "text": "For cutoffs, yes. A '60% and above' criterion means 60.00%, not 59.6%. Report two decimals and never round across a cutoff you don't clear." } },
+        { "@type": "Question", "name": "Can I use this for a 4-point GPA or diploma percentages?", "acceptedAnswer": { "@type": "Answer", "text": "The presets assume the Indian 10-point CGPA scale. For a 4-point GPA, convert to the 10-point scale first or use Custom formula mode." } }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip-link" href="#tool">Skip to calculator</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="CGPA to Percentage Calculator — home">
+      <span class="brand-mark" aria-hidden="true">%</span>
+      <span class="brand-text">CGPA<span class="brand-arrow">→</span>% Calculator</span>
+    </a>
+    <nav aria-label="Primary">
+      <a href="#tool">Calculator</a>
+      <a href="#formulas">Formulas</a>
+      <a href="blog/">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>CGPA to Percentage Calculator</h1>
+    <p class="lede">Convert your CGPA to percentage using the <strong>exact formula your university publishes</strong> — not a generic multiplier. Pick your university, enter your CGPA, get an instant result with the full calculation shown.</p>
+  </section>
+
+  <section id="tool" class="card tool" aria-labelledby="tool-heading">
+    <h2 id="tool-heading">Calculator</h2>
+
+    <div class="tabs" role="tablist" aria-label="Conversion modes">
+      <button role="tab" id="tab-convert" aria-controls="panel-convert" aria-selected="true">CGPA → %</button>
+      <button role="tab" id="tab-reverse" aria-controls="panel-reverse" aria-selected="false" tabindex="-1">% → CGPA</button>
+      <button role="tab" id="tab-sgpa" aria-controls="panel-sgpa" aria-selected="false" tabindex="-1">SGPA → CGPA</button>
+    </div>
+
+    <!-- Panel 1: CGPA to percentage -->
+    <div id="panel-convert" role="tabpanel" aria-labelledby="tab-convert">
+      <form id="form-convert" novalidate>
+        <div class="field">
+          <label for="uni-convert">University / formula</label>
+          <select id="uni-convert" required></select>
+          <p class="hint" id="uni-convert-note" aria-live="polite"></p>
+        </div>
+        <div class="field custom-formula" id="custom-convert-wrap" hidden>
+          <div class="grid-2">
+            <div>
+              <label for="custom-mult">Multiplier</label>
+              <input type="number" id="custom-mult" inputmode="decimal" step="any" min="0.0001" value="10" aria-describedby="custom-convert-err">
+            </div>
+            <div>
+              <label for="custom-off">Subtract from CGPA</label>
+              <input type="number" id="custom-off" inputmode="decimal" step="any" value="0" aria-describedby="custom-convert-err">
+            </div>
+          </div>
+          <p class="hint">Percentage = (CGPA − offset) × multiplier</p>
+        </div>
+        <div class="field">
+          <label for="cgpa-in">Your CGPA <span class="range">(0 – 10)</span></label>
+          <input type="number" id="cgpa-in" inputmode="decimal" step="any" min="0" max="10" placeholder="e.g. 8.5" required aria-describedby="convert-err">
+          <p class="error" id="convert-err" role="alert" hidden></p>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn primary">Convert</button>
+          <button type="button" class="btn" id="reset-convert">Reset</button>
+        </div>
+      </form>
+      <div class="result" id="result-convert" aria-live="polite" hidden>
+        <p class="result-label">Equivalent percentage</p>
+        <p class="result-value"><span id="result-convert-value">–</span></p>
+        <p class="result-formula" id="result-convert-formula"></p>
+        <p class="result-note" id="result-convert-note" hidden></p>
+        <button type="button" class="btn small" id="copy-convert">Copy result</button>
+      </div>
+    </div>
+
+    <!-- Panel 2: percentage to CGPA -->
+    <div id="panel-reverse" role="tabpanel" aria-labelledby="tab-reverse" hidden>
+      <form id="form-reverse" novalidate>
+        <div class="field">
+          <label for="uni-reverse">University / formula</label>
+          <select id="uni-reverse" required></select>
+          <p class="hint" id="uni-reverse-note" aria-live="polite"></p>
+        </div>
+        <div class="field custom-formula" id="custom-reverse-wrap" hidden>
+          <div class="grid-2">
+            <div>
+              <label for="custom-mult-r">Multiplier</label>
+              <input type="number" id="custom-mult-r" inputmode="decimal" step="any" min="0.0001" value="10">
+            </div>
+            <div>
+              <label for="custom-off-r">Subtract from CGPA</label>
+              <input type="number" id="custom-off-r" inputmode="decimal" step="any" value="0">
+            </div>
+          </div>
+          <p class="hint">CGPA = (Percentage ÷ multiplier) + offset</p>
+        </div>
+        <div class="field">
+          <label for="pct-in">Your percentage <span class="range">(0 – 100)</span></label>
+          <input type="number" id="pct-in" inputmode="decimal" step="any" min="0" max="100" placeholder="e.g. 77.5" required aria-describedby="reverse-err">
+          <p class="error" id="reverse-err" role="alert" hidden></p>
+        </div>
+        <div class="actions">
+          <button type="submit" class="btn primary">Convert</button>
+          <button type="button" class="btn" id="reset-reverse">Reset</button>
+        </div>
+      </form>
+      <div class="result" id="result-reverse" aria-live="polite" hidden>
+        <p class="result-label">Equivalent CGPA</p>
+        <p class="result-value"><span id="result-reverse-value">–</span></p>
+        <p class="result-formula" id="result-reverse-formula"></p>
+        <p class="result-note" id="result-reverse-note" hidden></p>
+        <button type="button" class="btn small" id="copy-reverse">Copy result</button>
+      </div>
+    </div>
+
+    <!-- Panel 3: SGPA to CGPA -->
+    <div id="panel-sgpa" role="tabpanel" aria-labelledby="tab-sgpa" hidden>
+      <form id="form-sgpa" novalidate>
+        <p class="hint">Enter each completed semester's SGPA and its total credits. CGPA is the credit-weighted average.</p>
+        <div id="sgpa-rows"></div>
+        <p class="error" id="sgpa-err" role="alert" hidden></p>
+        <div class="actions">
+          <button type="button" class="btn" id="sgpa-add">+ Add semester</button>
+          <button type="submit" class="btn primary">Calculate CGPA</button>
+          <button type="button" class="btn" id="reset-sgpa">Reset</button>
+        </div>
+      </form>
+      <div class="result" id="result-sgpa" aria-live="polite" hidden>
+        <p class="result-label">Your CGPA</p>
+        <p class="result-value"><span id="result-sgpa-value">–</span></p>
+        <p class="result-formula" id="result-sgpa-formula"></p>
+        <button type="button" class="btn small" id="use-in-converter">Convert this CGPA to %</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="formulas" class="card" aria-labelledby="formulas-heading">
+    <h2 id="formulas-heading">Formulas used by this calculator</h2>
+    <p>Every preset below shows the exact formula applied. Universities change regulations, so always confirm against your marksheet or the university's official circular before submitting figures on applications.</p>
+    <div class="table-scroll">
+      <table>
+        <caption class="visually-hidden">CGPA to percentage formulas by university</caption>
+        <thead>
+          <tr><th scope="col">University</th><th scope="col">Formula</th><th scope="col">Example: 8.5 CGPA</th></tr>
+        </thead>
+        <tbody id="formula-tbody"></tbody>
+      </table>
+    </div>
+    <p class="disclaimer"><strong>Accuracy note:</strong> some universities' formulas are disputed across sources (notably Anna University and AKTU, and VTU across schemes). Where that happens this tool offers each documented variant and labels it — pick the one your official circular states.</p>
+  </section>
+
+  <section id="guide" class="card prose" aria-labelledby="guide-heading">
+    <h2 id="guide-heading">How CGPA to percentage conversion actually works</h2>
+    <p>Your CGPA (Cumulative Grade Point Average) is a number on a 10-point scale summarising your entire degree. But most of the world outside your university — job application forms, government exams, foreign universities — still thinks in percentages. Converting between the two sounds like simple maths, and the most common mistake students make is assuming it <em>is</em> simple maths with one universal formula. It isn't.</p>
+    <h3>Why there is no single formula</h3>
+    <p>India never adopted one national rule for converting CGPA to percentage. Each university built its own grading system — different grade bands, different pass marks, different ideas about what a "10" means — and the conversion formula came bundled with it. The formula that is correct for you is the one your university publishes, usually printed on the back of your marksheet or in its academic regulations circular. Everything else is an approximation.</p>
+    <p>In practice, Indian universities cluster into a few formula families. Here is what each one does to the same CGPA of 8.5:</p>
+    <ul>
+      <li><strong>CGPA × 9.5 (CBSE):</strong> 8.5 × 9.5 = <strong>80.75%</strong>. The CBSE formula, derived from a board study of how CGPA mapped to actual board marks. Also used by Delhi University and several general universities.</li>
+      <li><strong>CGPA × 10 (generic):</strong> 8.5 × 10 = <strong>85%</strong>. The simplest mapping, used by Anna University (most commonly cited), many IITs/NITs, and private universities.</li>
+      <li><strong>(CGPA − 0.75) × 10 (VTU, AKTU):</strong> (8.5 − 0.75) × 10 = <strong>77.5%</strong>. The 0.75 correction factor aligns the conversion with the university's internal grade distribution.</li>
+      <li><strong>(CGPA − 0.5) × 10 (GTU, JNTUH):</strong> (8.5 − 0.5) × 10 = <strong>80%</strong>. A smaller correction factor, same idea.</li>
+      <li><strong>(7.1 × CGPA) + 11 (Mumbai University):</strong> (7.1 × 8.5) + 11 = <strong>71.35%</strong>. A linear formula from MU's official circular — the outlier of the group.</li>
+    </ul>
+    <p>Same student, same CGPA, five different "percentages" — a spread of nearly 14 points. That is why picking your university in the calculator above matters more than the arithmetic itself.</p>
+    <h3>A worked example: VTU, 8.5 CGPA</h3>
+    <p>Take a VTU student on the 2018 scheme with a CGPA of 8.5. The official formula (regulation 18OB §7.1) is <strong>Percentage = (CGPA − 0.75) × 10</strong>.</p>
+    <ol>
+      <li>Subtract the correction factor: 8.5 − 0.75 = 7.75</li>
+      <li>Multiply by 10: 7.75 × 10 = 77.5</li>
+      <li>Result: <strong>77.5%</strong></li>
+    </ol>
+    <p>If that student had lazily used the CBSE ×9.5 formula, they'd report 80.75% — over three points higher than their university recognises. On a placement form, that gap can matter. If different calculators keep giving you different numbers for the same CGPA, read <a href="blog/why-cgpa-calculators-give-different-answers.html">why CGPA calculators disagree (and which one to trust)</a>.</p>
+    <h3>SGPA vs CGPA, in one paragraph</h3>
+    <p>SGPA (Semester Grade Point Average) covers one semester: for each subject, multiply its credits by the grade points you earned, add those up, and divide by the semester's total credits. CGPA is the same idea stretched across your whole degree — each semester's SGPA weighted by that semester's credits. It is <em>not</em> a simple average of SGPAs unless every semester carried equal credits. The calculator's third tab does this weighting for you.</p>
+    <h3>Reading your marksheet: where the formula hides</h3>
+    <p>The most authoritative copy of your conversion formula is probably already in your hands: UGC norms require universities to print the official conversion rule on the reverse of the final transcript or consolidated marksheet. Look for a line like "Percentage of marks: P = (CGPA − 0.75) × 10" or a small conversion table. If your marksheet doesn't carry one, the next stop is your university's academic regulations for your admission year (usually a PDF on the university website under "Regulations" or "Academics"), and failing that, your college exam cell — which answers this exact question every placement season. When a calculator and your marksheet disagree, the marksheet wins. Always.</p>
+  </section>
+
+  <section id="use-cases" class="card prose" aria-labelledby="use-cases-heading">
+    <h2 id="use-cases-heading">When you actually need this conversion</h2>
+    <ul>
+      <li><strong>Job applications and placements.</strong> Most company forms ask for percentage, and many set cutoffs like "60% throughout." Your resume percentage must match your university's official formula — recruiters at large companies do cross-check, and a mismatch can cost an offer. <a href="blog/cgpa-to-percentage-for-placements.html">Read the full placements guide</a>.</li>
+      <li><strong>Higher studies in India.</strong> GATE, CAT, and institute applications may ask for either CGPA or percentage "as per university norms." Convert using the official formula and keep the calculation handy.</li>
+      <li><strong>Studying abroad.</strong> Credential evaluators like WES evaluate course-by-course, but universities still ask for your percentage alongside CGPA. Get a conversion formula certificate from your registrar before applying — it prevents back-and-forth later.</li>
+      <li><strong>Government jobs and PSUs.</strong> UPSC, SSC, banking, and PSU forms typically require the percentage derived from your university's official formula. Some PSUs ask for a registrar's letter certifying the formula — worth arranging in advance if your university uses a non-standard one.</li>
+      <li><strong>Scholarships.</strong> Merit scholarships almost always specify percentage cutoffs. Convert correctly before deciding whether you qualify.</li>
+    </ul>
+  </section>
+
+  <section id="how-to-use" class="card prose" aria-labelledby="how-to-use-heading">
+    <h2 id="how-to-use-heading">How to use this calculator</h2>
+    <ol>
+      <li><strong>CGPA → %:</strong> choose your university (or "Custom formula" and enter your own multiplier and offset), type your CGPA, hit Convert. The result shows the percentage plus the exact calculation, e.g. <code>(8.50 − 0.75) × 10 = 77.50%</code>.</li>
+      <li><strong>% → CGPA:</strong> the reverse — enter a percentage to see the equivalent CGPA under your university's formula. Useful when a cutoff is announced in percentage and you think in CGPA.</li>
+      <li><strong>SGPA → CGPA:</strong> enter each finished semester's SGPA and its total credits, then Calculate. Use "Convert this CGPA to %" to send the result straight into the main converter.</li>
+    </ol>
+    <p>Everything runs in your browser. Nothing is uploaded, stored, or tracked — you can verify this by disconnecting from the internet after the page loads and converting again.</p>
+  </section>
+
+  <section id="faq" class="card prose" aria-labelledby="faq-heading">
+    <h2 id="faq-heading">Frequently asked questions</h2>
+    <h3>What is the formula to convert CGPA to percentage?</h3>
+    <p>There is no single formula — it depends on your university. The common ones are CGPA × 9.5 (CBSE), CGPA × 10 (Anna University and many others), (CGPA − 0.75) × 10 (VTU, AKTU), (CGPA − 0.5) × 10 (GTU), and (7.1 × CGPA) + 11 (Mumbai University). Use the one your university publishes.</p>
+    <h3>Is CGPA × 9.5 correct for my university?</h3>
+    <p>Only if your university says so. The 9.5 multiplier is the CBSE formula; applying it to a VTU or AKTU CGPA will give you a wrong (usually inflated) percentage. Check the back of your marksheet.</p>
+    <h3>Why do different calculators show different percentages for the same CGPA?</h3>
+    <p>Because they apply different universities' formulas — or a generic one — to your number. A calculator is only as correct as the formula it assumes. <a href="blog/why-cgpa-calculators-give-different-answers.html">This article breaks down exactly why they disagree</a>.</p>
+    <h3>Which formula does VTU use?</h3>
+    <p>It depends on your scheme: the 2015/2017/2018 schemes use (CGPA − 0.75) × 10 per regulation 18OB §7.1, while several sources report the 2021 scheme onwards uses a straight CGPA × 10. Confirm against your scheme's circular — the calculator offers both.</p>
+    <h3>How do I convert percentage back to CGPA?</h3>
+    <p>Algebraically invert your university's formula. For (CGPA − 0.75) × 10, the reverse is (Percentage ÷ 10) + 0.75. The calculator's "% → CGPA" tab does this automatically for every preset.</p>
+    <h3>What is the difference between SGPA and CGPA?</h3>
+    <p>SGPA measures one semester; CGPA cumulates your whole degree with each semester weighted by its credits. You need all semester SGPAs (and credits) to compute CGPA — the SGPA → CGPA tab handles the weighting.</p>
+    <h3>Do companies ask for CGPA or percentage?</h3>
+    <p>Most Indian recruiters ask for percentage on application forms even when your transcript shows CGPA. Convert with your official formula and keep it consistent everywhere. <a href="blog/cgpa-to-percentage-for-placements.html">Details in the placements guide</a>.</p>
+    <h3>What CGPA is 75%?</h3>
+    <p>It depends on the formula: 7.5 under plain ×10, 8.25 under VTU's (CGPA − 0.75) × 10, and 8.0 under GTU's (CGPA − 0.5) × 10. This is exactly why "convert 75% to CGPA" has no single answer.</p>
+    <h3>Is this calculator official?</h3>
+    <p>No — it implements widely published formulas so you can compute quickly, but your university's circular or marksheet is the authority. For anything binding (job offers, visas, admissions), verify against the official document.</p>
+    <h3>What if my university isn't listed?</h3>
+    <p>Use "Custom formula" mode. Take the formula from your marksheet or circular and map it onto the two boxes: for <strong>Percentage = (CGPA − 0.75) × 10</strong>, set multiplier to 10 and "subtract from CGPA" to 0.75; for <strong>CGPA × 9.5</strong>, set multiplier to 9.5 and the offset to 0. The calculator then converts in both directions with your exact rule.</p>
+    <h3>Does rounding matter — is 77.5% the same as 78%?</h3>
+    <p>For casual conversation, no. For cutoffs, absolutely. A "60% and above" criterion means 60.00%, not 59.6% rounded up in your head. Report two decimals (the calculator does this automatically), and if a form demands a whole number, use standard rounding — but never round <em>across</em> a cutoff you don't actually clear.</p>
+    <h3>Can I use this for a 4-point GPA or diploma percentages?</h3>
+    <p>The presets assume the Indian 10-point CGPA scale. For a 4-point GPA (common in US-style transcripts), convert to the 10-point scale first or use Custom formula mode with your institution's mapping. Diploma (polytechnic) percentages are usually computed directly from marks, not via CGPA — check your board's rule.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Free for students. All calculations run in your browser — nothing is uploaded or stored.</p>
+    <p class="fine">© 2026 CGPA→% Calculator. Formulas are widely published; verify against your university's official circular.</p>
+  </div>
+</footer>
+
+<script src="app.js" defer></script>
+</body>
+</html>
